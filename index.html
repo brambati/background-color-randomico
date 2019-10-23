@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	
+	<style type="text/css">
+		body{transition: background-color 4s; background-color: #fc0;}
+	</style>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+	<script type="text/javascript">
+
+		window.onload = alterarBg();
+
+		function alterarBg(){
+			var randomico = Math.floor((Math.random() * 5) + 1);
+			var cores     = new Array("#fe223b", "#ff204d", "#ff1a7f", "#ff0000", "#00ff00", "#0000ff", "#fc0");
+			
+			var alterar   = cores[randomico];
+
+			$('body').css({'backgroundColor': alterar});
+			
+			setTimeout(function(){ 
+				alterarBg();
+			}, 5000);
+		}	
+		
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
